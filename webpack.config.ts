@@ -1,5 +1,5 @@
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
-import { BuildEnv, BuildMode, BuildPaths, BuildPort } from './config/build/types/config';
+import { BuildAliases, BuildEnv, BuildMode, BuildPaths, BuildPort } from './config/build/types/config';
 import path from 'path';
 
 export default (env: BuildEnv) => {
@@ -8,11 +8,18 @@ export default (env: BuildEnv) => {
 
   const isDev = mode === 'development';
 
+  const aliases: BuildAliases = {
+    app: path.resolve('src', 'app', '*'),
+    pages: path.resolve('src', 'pages', '*'),
+    shared: path.resolve('src', 'shared', '*'),
+  }
+
   const paths: BuildPaths = {
     html: path.resolve('public', 'index.html'),
     entry: path.resolve('src', 'index.tsx'),
     output: path.resolve('dist'),
+    src: path.resolve('src'),
   };
 
-  return buildWebpackConfig({ mode, port, paths, isDev });
+  return buildWebpackConfig({ mode, port, paths, aliases, isDev });
 };
