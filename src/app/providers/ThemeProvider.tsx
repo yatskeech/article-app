@@ -1,4 +1,4 @@
-import { Theme, THEME_STORAGE_KEY, ThemeContext } from '../../shared/theme/ThemeContext';
+import { ThemeContext, Theme, THEME_STORAGE_KEY } from '@shared/contexts';
 import { ReactNode, useEffect, useState } from 'react';
 
 const initialTheme = localStorage.getItem(THEME_STORAGE_KEY) as Theme || Theme.dark;

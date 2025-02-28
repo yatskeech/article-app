@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { Suspense } from 'react';
-import { useTheme } from '@shared/theme';
+import { useTheme } from '@shared/hooks';
 import { AboutPage } from '@pages/AboutPage';
 import { MainPage } from '@pages/MainPage';
 
