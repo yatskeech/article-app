@@ -10,6 +10,7 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
       '@app/*': options.aliases.app,
       '@pages/*': options.aliases.pages,
       '@shared/*': options.aliases.shared,
+      '@widgets/*': options.aliases.widgets,
     },
   };
 }

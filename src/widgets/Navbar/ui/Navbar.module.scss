@@ -1,0 +1,17 @@
+.navbar {
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 24px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+}

@@ -5,6 +5,7 @@ export interface BuildAliases {
   app: string;
   pages: string;
   shared: string;
+  widgets: string;
 }
 
 export interface BuildPaths {
