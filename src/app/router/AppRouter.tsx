@@ -2,11 +2,7 @@ import { Suspense } from 'react';
 import { Route, RouteProps, Routes } from 'react-router-dom';
 import { MainPage } from '@pages/MainPage';
 import { AboutPage } from '@pages/AboutPage';
-
-enum RoutePaths {
-  main = '/',
-  about = '/about',
-}
+import { RoutePaths } from '@shared/config';
 
 const appRoutes: Record<RoutePaths, RouteProps> = {
   [RoutePaths.main]: { path: RoutePaths.main, element: <MainPage /> },
