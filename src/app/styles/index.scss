@@ -1,8 +1,8 @@
 @import "reset", "fonts", "variables/globals";
-@import "themes/dark", "themes/light";
+@import "themes/blue", "themes/green";
 
 body {
   font: var(--font-m);
-  color: var(--secondary-color);
+  color: var(--primary-color);
   background: var(--bg-color);
 }

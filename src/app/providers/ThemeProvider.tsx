@@ -1,7 +1,7 @@
 import { ThemeContext, Theme, THEME_STORAGE_KEY } from '@shared/contexts';
 import { ReactNode, useEffect, useState } from 'react';
 
-const initialTheme = localStorage.getItem(THEME_STORAGE_KEY) as Theme || Theme.dark;
+const initialTheme = localStorage.getItem(THEME_STORAGE_KEY) as Theme || Theme.blue;
 
 function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(initialTheme);
