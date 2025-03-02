@@ -3,13 +3,17 @@ import { classnames } from '@shared/lib';
 import styles from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@shared/ui';
 
-export function Sidebar() {
+interface SidebarProps {
+  className?: string;
+}
+
+export function Sidebar({ className }: SidebarProps) {
   const [isOpened, setIsOpened] = useState(true);
 
   const toggleOpen = () => setIsOpened(!isOpened);
 
   return (
-    <div className={classnames(styles.sidebar, { [styles.opened]: isOpened })}>
+    <div className={classnames(styles.sidebar, className, { [styles.opened]: isOpened })}>
       <button onClick={toggleOpen}>open</button>
       <ThemeSwitcher />
     </div>
