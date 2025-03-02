@@ -9,6 +9,7 @@ export default (env: BuildEnv) => {
   const isDev = mode === 'development';
 
   const aliases: BuildAliases = {
+    public: path.resolve('public', '*'),
     app: path.resolve('src', 'app', '*'),
     pages: path.resolve('src', 'pages', '*'),
     shared: path.resolve('src', 'shared', '*'),

@@ -6,10 +6,12 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
+      "@public/*": ["public/*"],
       "@app/*": ["src/app/*"],
       "@pages/*": ["src/pages/*"],
       "@shared/*": ["src/shared/*"],

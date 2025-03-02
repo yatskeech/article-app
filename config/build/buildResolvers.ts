@@ -7,6 +7,7 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     preferAbsolute: true,
     modules: [options.paths.src, 'node_modules'],
     alias: {
+      '@public/*': options.aliases.public,
       '@app/*': options.aliases.app,
       '@pages/*': options.aliases.pages,
       '@shared/*': options.aliases.shared,

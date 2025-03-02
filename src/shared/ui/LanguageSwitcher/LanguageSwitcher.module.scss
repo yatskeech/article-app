@@ -1,0 +1,12 @@
+.button {
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-color);
+}

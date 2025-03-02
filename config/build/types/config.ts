@@ -2,6 +2,7 @@ export type BuildMode = 'development' | 'production';
 export type BuildPort = number;
 
 export interface BuildAliases {
+  public: string;
   app: string;
   pages: string;
   shared: string;
