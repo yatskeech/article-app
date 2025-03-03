@@ -7,9 +7,9 @@ function App() {
   return (
     <Suspense fallback={'Loading...'}>
       <Navbar />
-      <main className='main'>
-        <Sidebar/>
-        <AppRouter/>
+      <main className="main">
+        <Sidebar />
+        <AppRouter />
       </main>
     </Suspense>
   );

@@ -15,7 +15,9 @@ function AppRouter() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        {routes.map((route: RouteProps) => <Route key={route.path} {...route} />)}
+        {routes.map((route: RouteProps) => (
+          <Route key={route.path} {...route} />
+        ))}
       </Routes>
     </Suspense>
   );

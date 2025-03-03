@@ -32,13 +32,15 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         options: {
           modules: {
             auto: /\.module\./,
-            localIdentName: isDev ? "[name]__[hash:base64:4]" : "[hash:base64:8]",
+            localIdentName: isDev
+              ? '[name]__[hash:base64:4]'
+              : '[hash:base64:8]',
           },
-        }
+        },
       },
-      "sass-loader"
+      'sass-loader',
     ],
   };
 
-  return [ svgLoader, imageLoader, typescriptLoader, styleLoader ];
+  return [svgLoader, imageLoader, typescriptLoader, styleLoader];
 }

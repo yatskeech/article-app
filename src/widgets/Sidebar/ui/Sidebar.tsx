@@ -13,10 +13,14 @@ export function Sidebar({ className }: SidebarProps) {
   const toggleOpen = () => setIsOpened(!isOpened);
 
   return (
-    <div className={classnames(styles.sidebar, className, { [styles.opened]: isOpened })}>
+    <div
+      className={classnames(styles.sidebar, className, {
+        [styles.opened]: isOpened,
+      })}
+    >
       <button onClick={toggleOpen}>open</button>
       <div className={styles.switchers}>
-        <ThemeSwitcher/>
+        <ThemeSwitcher />
         <LanguageSwitcher />
       </div>
     </div>

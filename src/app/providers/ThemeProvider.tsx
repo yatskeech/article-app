@@ -1,7 +1,8 @@
 import { ThemeContext, Theme, THEME_STORAGE_KEY } from '@shared/contexts';
 import { ReactNode, useEffect, useState } from 'react';
 
-const initialTheme = localStorage.getItem(THEME_STORAGE_KEY) as Theme || Theme.blue;
+const initialTheme =
+  (localStorage.getItem(THEME_STORAGE_KEY) as Theme) || Theme.blue;
 
 function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(initialTheme);
@@ -12,7 +13,7 @@ function ThemeProvider({ children }: { children: ReactNode }) {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );

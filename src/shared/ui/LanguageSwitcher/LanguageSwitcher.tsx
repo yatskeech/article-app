@@ -11,12 +11,14 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation('common');
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === Languages.en ? Languages.ru : Languages.en);
+    i18n.changeLanguage(
+      i18n.language === Languages.en ? Languages.ru : Languages.en,
+    );
   };
 
   return (
     <button onClick={toggleLanguage} className={styles.button}>
-        <LanguageIcon className={styles.icon}/>
+      <LanguageIcon className={styles.icon} />
     </button>
   );
 }

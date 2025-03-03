@@ -5,7 +5,7 @@ import { Configuration } from 'webpack';
 import { BuildOptions } from './types/config';
 import { buildDevServer } from './buildDevServer';
 
-export function buildWebpackConfig(options: BuildOptions): Configuration  {
+export function buildWebpackConfig(options: BuildOptions): Configuration {
   return {
     mode: options.mode,
     devtool: options.isDev ? 'inline-source-map' : undefined,
@@ -19,5 +19,5 @@ export function buildWebpackConfig(options: BuildOptions): Configuration  {
     plugins: buildPlugins(options),
     module: { rules: buildLoaders(options) },
     resolve: buildResolvers(options),
-  }
+  };
 }

@@ -1,6 +1,9 @@
 @font-face {
-  font-family: "Consolas";
+  font-family: 'Consolas';
   font-style: normal;
   font-weight: 400;
-  src: local("Consolas"), url("../../shared/assets/fonts/Consolas.woff2") format("woff2"), url("../../shared/assets/fonts/Consolas.woff") format("woff");
+  src:
+    local('Consolas'),
+    url('../../shared/assets/fonts/Consolas.woff2') format('woff2'),
+    url('../../shared/assets/fonts/Consolas.woff') format('woff');
 }

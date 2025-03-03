@@ -11,7 +11,10 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
   const { toggleTheme } = useTheme();
 
   return (
-    <button onClick={toggleTheme} className={classnames(styles.button, className)}>
+    <button
+      onClick={toggleTheme}
+      className={classnames(styles.button, className)}
+    >
       <MoonIcon className={styles.icon} />
     </button>
   );

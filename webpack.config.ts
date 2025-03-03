@@ -1,5 +1,11 @@
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
-import { BuildAliases, BuildEnv, BuildMode, BuildPaths, BuildPort } from './config/build/types/config';
+import {
+  BuildAliases,
+  BuildEnv,
+  BuildMode,
+  BuildPaths,
+  BuildPort,
+} from './config/build/types/config';
 import path from 'path';
 
 export default (env: BuildEnv) => {
@@ -14,7 +20,7 @@ export default (env: BuildEnv) => {
     pages: path.resolve('src', 'pages', '*'),
     shared: path.resolve('src', 'shared', '*'),
     widgets: path.resolve('src', 'widgets', '*'),
-  }
+  };
 
   const paths: BuildPaths = {
     html: path.resolve('public', 'index.html'),

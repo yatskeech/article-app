@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ThemeContext, Theme } from '../contexts';
 
 const themes = Object.values(Theme);
