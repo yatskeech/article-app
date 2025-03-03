@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { classnames } from '@shared/lib';
 import styles from './Sidebar.module.scss';
 import { LanguageSwitcher, ThemeSwitcher } from '@shared/ui';
+import { useTranslation } from 'react-i18next';
 
 interface SidebarProps {
   className?: string;
@@ -9,6 +10,7 @@ interface SidebarProps {
 
 export function Sidebar({ className }: SidebarProps) {
   const [isOpened, setIsOpened] = useState(true);
+  const { t } = useTranslation('common');
 
   const toggleOpen = () => setIsOpened(!isOpened);
 
@@ -18,7 +20,7 @@ export function Sidebar({ className }: SidebarProps) {
         [styles.opened]: isOpened,
       })}
     >
-      <button onClick={toggleOpen}>open</button>
+      <button onClick={toggleOpen}>{t('common:sidebar.button')}</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LanguageSwitcher />

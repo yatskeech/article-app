@@ -5,6 +5,7 @@ import pluginReact from 'eslint-plugin-react';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintImportPlugin from 'eslint-plugin-import';
+import i18nextPlugin from 'eslint-plugin-i18next';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -25,11 +26,12 @@ export default [
   eslintPluginReactHooks.configs['recommended-latest'],
   eslintImportPlugin.flatConfigs.recommended,
   eslintImportPlugin.flatConfigs.typescript,
+  i18nextPlugin.configs['flat/recommended'],
   {
     rules: {
       'import/no-unresolved': 'off',
       'react/no-deprecated': 'warn',
-      'react/react-in-jsx-scope': 'warn',
+      'react/react-in-jsx-scope': 'off',
     },
   },
 ];

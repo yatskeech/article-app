@@ -1,3 +1,10 @@
+.switchers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .sidebar {
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
@@ -16,11 +23,4 @@
       flex-direction: row;
     }
   }
-}
-
-.switchers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
 }

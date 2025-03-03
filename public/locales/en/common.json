@@ -4,5 +4,8 @@
       "about": "About",
       "main": "Main"
     }
+  },
+  "sidebar": {
+    "button": "Open"
   }
 }
