@@ -10,7 +10,7 @@ interface SidebarProps {
 
 export function Sidebar({ className }: SidebarProps) {
   const [isOpened, setIsOpened] = useState(true);
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
 
   const toggleOpen = () => setIsOpened(!isOpened);
 
@@ -20,7 +20,7 @@ export function Sidebar({ className }: SidebarProps) {
         [styles.opened]: isOpened,
       })}
     >
-      <button onClick={toggleOpen}>{t('common:sidebar.button')}</button>
+      <button onClick={toggleOpen}>{t('sidebar.button')}</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LanguageSwitcher />

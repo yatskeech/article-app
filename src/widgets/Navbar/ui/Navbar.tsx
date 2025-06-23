@@ -9,16 +9,16 @@ interface NavbarProps {
 }
 
 export function Navbar({ className }: NavbarProps) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
 
   return (
     <header className={classnames(styles.navbar, className)}>
       <div className={styles.links}>
         <Link to={RoutePaths.main} className={styles.link}>
-          {t('common:navbar.links.main')}
+          {t('navbar.links.main')}
         </Link>
         <Link to={RoutePaths.about} className={styles.link}>
-          {t('common:navbar.links.about')}
+          {t('navbar.links.about')}
         </Link>
       </div>
     </header>

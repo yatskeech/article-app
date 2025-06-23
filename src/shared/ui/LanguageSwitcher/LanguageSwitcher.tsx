@@ -8,7 +8,7 @@ enum Languages {
 }
 
 export function LanguageSwitcher() {
-  const { i18n } = useTranslation('common');
+  const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
     i18n.changeLanguage(

@@ -4,18 +4,16 @@ import { MainPage } from '@pages/MainPage';
 import { AboutPage } from '@pages/AboutPage';
 import { RoutePaths } from '@shared/config/router';
 
-const appRoutes: Record<RoutePaths, RouteProps> = {
-  [RoutePaths.main]: { path: RoutePaths.main, element: <MainPage /> },
-  [RoutePaths.about]: { path: RoutePaths.about, element: <AboutPage /> },
-};
-
-const routes = Object.values(appRoutes);
+const appRoutes: RouteProps[] = [
+  { path: RoutePaths.main, element: <MainPage /> },
+  { path: RoutePaths.about, element: <AboutPage /> },
+];
 
 function AppRouter() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        {routes.map((route: RouteProps) => (
+        {appRoutes.map((route: RouteProps) => (
           <Route key={route.path} {...route} />
         ))}
       </Routes>
