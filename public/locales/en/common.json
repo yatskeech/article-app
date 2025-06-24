@@ -7,5 +7,6 @@
   },
   "sidebar": {
     "button": "Open"
-  }
+  },
+  "not-found": "Page not found"
 }

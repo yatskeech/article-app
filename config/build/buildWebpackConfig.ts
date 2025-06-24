@@ -14,6 +14,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
     output: {
       filename: 'bundle.js',
       path: options.paths.output,
+      publicPath: '/',
       clean: true,
     },
     plugins: buildPlugins(options),

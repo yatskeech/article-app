@@ -7,6 +7,7 @@ export interface BuildAliases {
   pages: string;
   shared: string;
   widgets: string;
+  features: string;
 }
 
 export interface BuildPaths {

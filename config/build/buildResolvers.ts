@@ -12,6 +12,7 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
       '@pages/*': options.aliases.pages,
       '@shared/*': options.aliases.shared,
       '@widgets/*': options.aliases.widgets,
+      '@features/*': options.aliases.features,
     },
   };
 }

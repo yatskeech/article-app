@@ -20,6 +20,7 @@ export default (env: BuildEnv) => {
     pages: path.resolve('src', 'pages', '*'),
     shared: path.resolve('src', 'shared', '*'),
     widgets: path.resolve('src', 'widgets', '*'),
+    features: path.resolve('src', 'features', '*'),
   };
 
   const paths: BuildPaths = {

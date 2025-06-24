@@ -11,7 +11,11 @@ import i18nextPlugin from 'eslint-plugin-i18next';
 export default [
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   { ignores: ['node_modules', 'dist'] },
-  { languageOptions: { globals: globals.browser } },
+  {
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.jest, ...globals.node },
+    },
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
