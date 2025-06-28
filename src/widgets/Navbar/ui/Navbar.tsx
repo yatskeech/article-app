@@ -15,10 +15,10 @@ export function Navbar({ className }: NavbarProps) {
     <header className={classnames(styles.navbar, className)}>
       <div className={styles.links}>
         <Link to={RoutePaths.main} className={styles.link}>
-          {t('navbar.links.main')}
+          {t('Главная')}
         </Link>
         <Link to={RoutePaths.about} className={styles.link}>
-          {t('navbar.links.about')}
+          {t('О сайте')}
         </Link>
       </div>
     </header>

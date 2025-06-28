@@ -1,12 +1,8 @@
 {
-  "navbar": {
-    "links": {
-      "about": "About",
-      "main": "Main"
-    }
-  },
-  "sidebar": {
-    "button": "Open"
-  },
-  "not-found": "Page not found"
+  "О сайте": "About",
+  "Главная": "Main",
+
+  "Открыть": "Open",
+
+  "Страница не найдена": "Page not found"
 }

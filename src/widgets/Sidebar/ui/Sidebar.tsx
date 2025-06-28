@@ -20,7 +20,7 @@ export function Sidebar({ className }: SidebarProps) {
         [styles.opened]: isOpened,
       })}
     >
-      <button onClick={toggleOpen}>{t('sidebar.button')}</button>
+      <button onClick={toggleOpen}>{t('Открыть')}</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LanguageSwitcher />
